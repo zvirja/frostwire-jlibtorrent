@@ -242,7 +242,7 @@ script:
 
 before_deploy:
   - cd swig/bin
-  - find . -type f | egrep -v '.*\.so$|.*\.dll$|.*\.dylib$|.*\.debug$' | xargs rm
+  - find . -type f | egrep -v '.*\.so$|.*\.dll$|.*\.dylib$' | xargs rm
   - find . -empty -type d | xargs rm -r
   - cd ../..
 
