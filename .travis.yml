@@ -247,9 +247,11 @@ before_deploy:
   - cd ../..
 
 deploy:
-  provider: releases
-  api_key: $GITHUB_OAUTH_KEY
-  local_dir: swig/bin
+  provider: pages
   skip_cleanup: true
+  github-token: $GITHUB_OAUTH_KEY
+  target-branch: artifacts
+  local-dir: swig/bin
+  keep-history: true
   on:
     all_branches: true
